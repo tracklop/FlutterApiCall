@@ -1,10 +1,12 @@
-import express from "express";
-
+const express = require("express");
 const app = express();
+const PORT = 4000;
 
-const PORT = 3000;
+app.get("/home", (req, res) => {
+	res.status(200).json("Welcome, your app is working well");
+});
 
-app.get("/", (req, res) => {
+app.get("/fake-data", (req, res) => {
 	const fakeData = {
 		id: 1,
 		name: "John Doe",
@@ -17,5 +19,7 @@ app.get("/", (req, res) => {
 });
 
 app.listen(PORT, () => {
-	console.log(`Serveur lancé sur le port ${PORT}`);
+	console.log(`Server running at http://localhost:${PORT}`);
 });
+
+module.exports = app;
