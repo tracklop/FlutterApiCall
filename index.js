@@ -1,6 +1,9 @@
 const express = require("express");
+const cors = require("cors");
 const app = express();
 const PORT = 4000;
+
+app.use(cors());
 
 app.get("/home", (req, res) => {
 	res.status(200).json("Welcome, your app is working well");
