@@ -6,7 +6,7 @@ const port = 4000;
 
 const DATA_FILE = "./tasks.json";
 
-app.use(cors());
+app.use(cors({ origin: "*" }));
 app.use(express.json());
 
 async function readTasks() {
