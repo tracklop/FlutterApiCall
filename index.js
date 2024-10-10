@@ -4,7 +4,7 @@ const app = express();
 
 const PORT = 3000;
 
-app.get("/fake-data", (req, res) => {
+app.get("/", (req, res) => {
 	const fakeData = {
 		id: 1,
 		name: "John Doe",
